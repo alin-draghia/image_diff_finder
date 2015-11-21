@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
@@ -26,6 +26,8 @@ def main():
     # draw 
 
     plt.figure()
+    plt.subplot(121)
+    plt.title('reference')
     plt.imshow(ref_im, cmap='gray')
     ax = plt.gca()
     for i, (left, top, width, height, area) in enumerate(stats):
@@ -43,7 +45,8 @@ def main():
             ax.add_patch(r)
         pass
 
-    plt.figure()
+    plt.subplot(122)
+    plt.title('test')
     plt.imshow(tst_im, cmap='gray')
     ax = plt.gca()
     for i, (left, top, width, height, area) in enumerate(stats):
@@ -60,14 +63,14 @@ def main():
             ax.add_patch(r)
         pass
 
-    plt.figure()
-    plt.imshow(diff)
-    plt.figure()
-    plt.imshow(bin)
-    plt.figure()
-    plt.imshow(bin2)
-    plt.figure()
-    plt.imshow(lbl)
+    #plt.figure()
+    #plt.imshow(diff)
+    #plt.figure()
+    #plt.imshow(bin)
+    #plt.figure()
+    #plt.imshow(bin2)
+    #plt.figure()
+    #plt.imshow(lbl)
     plt.show()
     plt.close('all')
 
