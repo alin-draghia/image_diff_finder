@@ -23,6 +23,7 @@ def main():
     # extract connected components
     cc, lbl, stats, centroids = cv2.connectedComponentsWithStats(bin2)
 
+    print stats
     # draw 
 
     plt.figure()
