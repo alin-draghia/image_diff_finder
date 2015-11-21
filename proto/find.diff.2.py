@@ -10,7 +10,7 @@ def main():
 
     ref_im = cv2.imread(r'..\test.images\pcb.1\CircuitBoard.jpg', image_type)
     tst_im = cv2.imread(r'..\test.images\pcb.1\CircuitBoard-diff.png', image_type)
-    tst_im = cv2.imread(r'..\test.images\pcb.1\CircuitBoard-diff-light.png', image_type)
+    #tst_im = cv2.imread(r'..\test.images\pcb.1\CircuitBoard-diff-light.png', image_type)
 
     h, w = ref_im.shape[:2]
 
